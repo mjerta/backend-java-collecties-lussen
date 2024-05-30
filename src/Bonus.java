@@ -1,6 +1,4 @@
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class Bonus {
 
@@ -10,16 +8,18 @@ public class Bonus {
         // In de code staan op verschillende plekken comments tussen "/*...*/" als hint wat je moet doen
 
 
+
         HashSet<Integer> secretnumber = randomnumbergenerator();
         String stringnumber = setToStringConverter(secretnumber);
-        System.out.println(stringnumber);
-        feedback(/*vul hier het juiste argument in*/);
+//        System.out.println(stringnumber);
+//        feedback(/*vul hier het juiste argument in*/);
 
     }
 
-    public static void/*moet dit returntype "void" zijn of wat anders?*/ randomnumbergenerator(/*Heeft deze methode nog parameter(s) nodig?*/){
+    public static HashSet<Integer> randomnumbergenerator(){
          /*
         Vul hier de body van de methode in.
+
 
         Stappenplan:
         - Maak een nieuwe variabele van type Random. (Tip: Zoek op internet hoe je Random kunt gebruiken)
@@ -27,9 +27,15 @@ public class Bonus {
         - Schrijf een while-loop om 4 random nummers aan de hashset toe te voegen
         - return de hashset
          */
+        Random rand = new Random();
+        HashSet<Integer> numbers = new HashSet<>();
+        while (numbers.size() < 4) {
+            numbers.add(rand.nextInt(100));
+        }
+        return numbers;
     }
 
-    public static void/*moet dit returntype "void" zijn of wat anders?*/ setToStringConverter(/*Heeft deze methode nog parameter(s) nodig?*/){
+    public static String setToStringConverter(HashSet<Integer> numbers){
         /*
         Vul hier de body van de methode in.
 
@@ -38,6 +44,13 @@ public class Bonus {
         - Schrijf vervolgens een for-loop om de items in de hashset een voor een aan de String variabele toe te voegen.
         - Return de (gevulde) String variabele
          */
+        // This will just generate a empty String but to convert it yet to a string
+        StringBuilder sb = new StringBuilder();
+        for (Integer number : numbers) {
+            sb.append(number);
+        }
+        return sb.toString();
+
     }
 
 
