@@ -1,7 +1,8 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class Translator {
-  HashMap<Integer, String> numericAlpha;
+ private  Map<Integer, String> numericAlpha = new HashMap<>();
 
   public Translator(String[] alphabetic, Integer[] numeric) {
     for(int i = 0; i < alphabetic.length && i < numeric.length; i++) {
@@ -9,11 +10,11 @@ public class Translator {
     }
   }
 
-  public HashMap<Integer, String> getNumericAlpha() {
+  public Map<Integer, String> getNumericAlpha() {
     return numericAlpha;
   }
 
-  public void setNumericAlpha(HashMap<Integer, String> numericAlpha) {
+  public void setNumericAlpha(Map<Integer, String> numericAlpha) {
     this.numericAlpha = numericAlpha;
   }
 
