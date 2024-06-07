@@ -8,7 +8,7 @@ public class Bonus {
     // In de code staan op verschillende plekken comments tussen "/*...*/" als hint wat je moet doen
 
     // The first method is being used to create a random number that will saved in a
-    HashSet<Integer> secretnumber = randomnumbergenerator();
+    Set<Integer> secretnumber = randomnumbergenerator();
     // HastSet collection.
     // This will force the numbers that are being saved to be unique.
     // This is still an array that need to be looped over
@@ -40,7 +40,7 @@ public class Bonus {
     return numbers;
   }
 
-  public static String setToStringConverter(HashSet<Integer> numbers) {
+  public static String setToStringConverter(Set<Integer> numbers) {
         /*
         Vul hier de body van de methode in.
         Stappenplan:
